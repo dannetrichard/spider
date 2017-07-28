@@ -1,6 +1,9 @@
 <?php
+
 namespace Dannetrichard\Spider;
+
 use Illuminate\Support\ServiceProvider;
+
 class SpiderServiceProvider extends ServiceProvider
 {
     /**
@@ -10,8 +13,8 @@ class SpiderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
     }
+
     /**
      * Register the application services.
      *
