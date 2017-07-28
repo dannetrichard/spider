@@ -1,14 +1,13 @@
 <?php
-namespace Dannetrichard\Spider\Tests;
 
-use Dannetrichard\Spider\Tests\TestCase;
+namespace Dannetrichard\Spider\Tests;
 
 use Dannetrichard\Spider\Spider;
 
 class SpiderTest extends TestCase
 {
     /**
-     * Check that the multiply method returns correct result
+     * Check that the multiply method returns correct result.
      * @return void
      */
     public function testMultiplyReturnsCorrectValue()

@@ -1,9 +1,9 @@
 <?php
+
 namespace Dannetrichard\Spider\Tests;
 
-use Orchestra\Testbench\TestCase as TestBenchTestCase;
-
 use Dannetrichard\Spider\Spider;
+use Orchestra\Testbench\TestCase as TestBenchTestCase;
 
 class TestCase extends TestBenchTestCase
 {
@@ -11,7 +11,7 @@ class TestCase extends TestBenchTestCase
     {
         return ['Dannetrichard\Spider\SpiderServiceProvider'];
     }
-    
+
     public function testMultiplyReturnsCorrectValue()
     {
         $this->assertSame(Spider::multiply(4, 4), 16);
