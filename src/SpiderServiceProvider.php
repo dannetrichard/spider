@@ -10,15 +10,7 @@ class SpiderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-            $this->publishes([
-                __DIR__.'/path/to/config/courier.php' => config_path('courier.php'),
-            ]);
-            $this->loadRoutesFrom(__DIR__.'/routes.php');
-            $this->loadMigrationsFrom(__DIR__.'/path/to/migrations');
-            $this->loadTranslationsFrom(__DIR__.'/path/to/translations', 'courier');
-            $this->publishes([
-                __DIR__.'/path/to/translations' => resource_path('lang/vendor/courier'),
-            ]);
+
     }
     /**
      * Register the application services.
