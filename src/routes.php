@@ -1,4 +1,4 @@
 <?php
 
-Route::get('/','ProductControllers@index');
+Route::get('/','ProductController@index');
 
