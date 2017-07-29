@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Dannetrichard\Spider\Spider;
+use Spider;
 
 class ProductController extends Controller
 {
