@@ -1,5 +1,4 @@
 <?php
 
-namespace Dannetrichard\Spider;
-
+Route::get('/','ProductControllers@index');
 
