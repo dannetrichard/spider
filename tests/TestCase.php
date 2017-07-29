@@ -18,7 +18,7 @@ class TestCase extends TestBenchTestCase
     public function testMultiplyReturnsCorrectValue()
     {
         
-        $this->assertSame(Spider::multiply(4, 4), 18);
+        $this->assertSame(Spider::multiply(4, 4), 16);
         
         $this->assertSame(Spider::multiply(2, 9), 18);
         
