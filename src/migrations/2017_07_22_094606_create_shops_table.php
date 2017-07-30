@@ -20,7 +20,7 @@ class CreateShopsTable extends Migration
             $table->string('name',16)->unique()->comment('店铺名，16字符');
             $table->unsignedInteger('user_id')->default(1);
             $table->enum('status',['normal','deleted']);
-            $table->foreign('user_id')->references('id')->on('users');
+            //$table->foreign('user_id')->references('id')->on('users');
         });
     }
 
