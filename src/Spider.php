@@ -17,7 +17,7 @@ class Spider
         return $a * $b;
     }
 
-    public function static refresh(){
+    public static function refresh(){
         
         foreach (Product::cursor() as $product) {
                 $detail = $this->wdetail($product->tb_product_id);  
