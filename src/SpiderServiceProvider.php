@@ -17,7 +17,7 @@ class SpiderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/models' => app_path(),
             __DIR__.'/controllers' => app_path('Http/Controllers'),
-            __DIR__.'/commands/Spider.php' => app_path('Console/Commands/Spider.php'),
+            __DIR__.'/commands/SpiderCommand.php' => app_path('Console/Commands/SpiderCommand.php'),
             //__DIR__.'/commands/Kernel.php' => app_path('Console/Kernel.php'),
             //__DIR__.'/routes.php' => routes_path('web.php'),
             //__DIR__.'/config/spider.php' => config_path('spider.php'),
