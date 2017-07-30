@@ -41,9 +41,9 @@ class SpiderCommand extends Command
     {
         $r = $this->option('r');
         if($r){
-    		Spider::refresh();
+    		Spider::multiply(3,4);
     	}else{
-    		Spider::index(); 
+    		Spider::multiply(5,6); 
     	}
  
     }
