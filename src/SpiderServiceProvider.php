@@ -19,6 +19,7 @@ class SpiderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/models' => app_path(),
             __DIR__.'/controllers' => app_path('Http/Controllers'),
+            __DIR__.'/seeds' => app_path('database/seeds'),
         ]);
         if ($this->app->runningInConsole()) {
             $this->commands([
