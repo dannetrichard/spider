@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Dannetrichard\Spider\Commands;
 
 use Illuminate\Console\Command;
 

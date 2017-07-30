@@ -4,6 +4,8 @@ namespace Dannetrichard\Spider;
 
 use Illuminate\Support\ServiceProvider;
 
+use Dannetrichard\Spider\Commands\SpiderCommand;
+
 class SpiderServiceProvider extends ServiceProvider
 {
     /**
@@ -17,11 +19,12 @@ class SpiderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/models' => app_path(),
             __DIR__.'/controllers' => app_path('Http/Controllers'),
-            __DIR__.'/commands/SpiderCommand.php' => app_path('Console/Commands/SpiderCommand.php'),
-            __DIR__.'/commands/Kernel.php' => app_path('Console/Kernel.php'),
-            __DIR__.'/routes.php' => base_path('routes/web.php'),
-            __DIR__.'/config/spider.php' => config_path('spider.php'),
-        ]);        
+        ]);
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                SpiderCommand::class,
+            ]);
+        }        
     }
 
     /**
