@@ -17,8 +17,8 @@ class Spider
         return $a * $b;
     }
 
-    public function refresh(){
-        echo 'spider test';
+    public function static refresh(){
+        
         foreach (Product::cursor() as $product) {
                 $detail = $this->wdetail($product->tb_product_id);  
                  if($detail){
@@ -27,7 +27,7 @@ class Spider
         }
          
     }
-    public function index(){
+    public static function index(){
                 
         $shops = Shop::where('status','normal')->get();
         if($shops){
@@ -40,7 +40,6 @@ class Spider
                         $detail = $this->wdetail($item['item_id']);  
                         if($detail){
                             $product_id = $this->product($detail); 
-                            echo '----------'.$shop->name.'  '.$product_id.'-----------';   
                         }   
                          
                         
@@ -290,7 +289,7 @@ class Spider
 		$descInfo = $detail['descInfo'];	
 		//tb_product_id
 		$product['tb_product_id'] = $itemInfoModel['itemId'];	
-		echo '>>>>'.$product['tb_product_id'].'>>>';
+	    //echo '>>>'.$product['tb_product_id'].'>>>';
         //price \ discount_price
 		if (isset($apiStack_itemInfoModel['priceUnits'][1])) {
 			$product['price'] = $apiStack_itemInfoModel['priceUnits'][1]['price'];
@@ -394,8 +393,7 @@ class Spider
 		    }
 		    if(str_contains($temp['discount_price'],'-')){
 		        $temp['discount_price'] = explode('-',$temp['discount_price'])[0];
-		    }
-		    	 echo 2;			
+		    }			
 		    //properties_name
 			$nn = '';
 			$arr = explode(';', $ppathIdmap[$k]);
