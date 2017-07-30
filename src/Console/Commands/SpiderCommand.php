@@ -13,7 +13,7 @@ class SpiderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'spider {--r}';
+    protected $signature = 'spider {--r} {--t}';
 
     /**
      * The console command description.
@@ -40,7 +40,9 @@ class SpiderCommand extends Command
      */
     public function handle()
     {
-        if($this->option('r')){
+        if($this->option('t')){
+            echo $this->spider->multiply(5,7);  
+        }elseif($this->option('r')){
     		$this->spider->refresh();
     	}else{
     		$this->spider->index(); 
