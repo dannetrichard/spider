@@ -17,7 +17,7 @@ class Spider
         return $a * $b;
     }
 
-    public static function refresh(){
+    public function refresh(){
         
         foreach (Product::cursor() as $product) {
                 $detail = $this->wdetail($product->tb_product_id);  
@@ -27,7 +27,7 @@ class Spider
         }
          
     }
-    public static function index(){
+    public function index(){
                 
         $shops = Shop::where('status','normal')->get();
         if($shops){

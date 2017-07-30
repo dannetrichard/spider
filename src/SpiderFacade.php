@@ -8,6 +8,6 @@ class SpiderFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Spider';
+        return 'spider';
     }
 }

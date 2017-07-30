@@ -30,6 +30,5 @@ class SpiderServiceProvider extends ServiceProvider
         $this->app->singleton(Spider::class, function () {
             return new Spider();
         });
-        $this->app->alias(Spider::class, 'Spider');
     }
 }

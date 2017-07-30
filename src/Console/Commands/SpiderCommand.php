@@ -27,9 +27,10 @@ class SpiderCommand extends Command
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Spider $spider)
     {
         parent::__construct();
+        $this->spider =  $spider;
     }
 
     /**
@@ -40,9 +41,9 @@ class SpiderCommand extends Command
     public function handle()
     {
         if($this->option('r')){
-    		Spider::refresh();
+    		$this->spider->refresh();
     	}else{
-    		Spider::index(); 
+    		$this->spider->index(); 
     	}
     }
 }
