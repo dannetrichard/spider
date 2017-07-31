@@ -16,6 +16,7 @@
         }
     ],
     "autoload": {
+        "file": ["src/helper.php"],
         "psr-4": {
             "Dannetrichard\\Spider\\": "src"
         }

@@ -2,8 +2,6 @@
 
 namespace Dannetrichard\Spider;
 
-require('Helpers.php');
-
 use App\Category;
 use App\Shop;
 use App\Product;
