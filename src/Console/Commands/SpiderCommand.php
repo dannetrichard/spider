@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-use Dannetrichard\Spider\Spider;
+use Spider;
 
 class SpiderCommand extends Command
 {
@@ -27,10 +27,9 @@ class SpiderCommand extends Command
      *
      * @return void
      */
-    public function __construct(Spider $spider)
+    public function __construct()
     {
         parent::__construct();
-        $this->spider =  $spider;
     }
 
     /**
@@ -41,11 +40,11 @@ class SpiderCommand extends Command
     public function handle()
     {
         if($this->option('t')){
-            echo $this->spider->multiply(5,7);  
+            echo Spider::multiply(5,7);  
         }elseif($this->option('r')){
-    		$this->spider->refresh();
+    		Spider::refresh();
     	}else{
-    		$this->spider->index(); 
+    		Spider::index(); 
     	}
     }
 }

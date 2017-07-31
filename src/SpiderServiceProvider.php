@@ -27,7 +27,7 @@ class SpiderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Spider::class, function () {
+        $this->app->singleton('spider', function () {
             return new Spider();
         });
     }
