@@ -1,7 +1,4 @@
 <?php
-
-namespace Dannetrichard\Spider;
-
 function curl_array($url) {
     $status = true;
     while ($status) {
