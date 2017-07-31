@@ -10,7 +10,7 @@ use App\Sku;
 
 class Spider
 {
-    public function multiply($a, $b)
+    public static function multiply($a, $b)
     {
         return $a * $b;
     }
