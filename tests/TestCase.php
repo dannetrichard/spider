@@ -4,7 +4,7 @@ namespace Dannetrichard\Spider\Tests;
 
 use Orchestra\Testbench\TestCase as TestBenchTestCase;
 
-use Dannetrichard\Spider\Spider;
+use Dannetrichard\Spider\Facades\Spider;
 
 class TestCase extends TestBenchTestCase
 {
